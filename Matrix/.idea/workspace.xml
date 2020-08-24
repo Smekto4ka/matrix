@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19c48100-5dcc-4172-9a04-527343cf36fd" name="Default Changelist" comment="" />
+    <list default="true" id="19c48100-5dcc-4172-9a04-527343cf36fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mor/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +60,42 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="metod" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="765" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1597933070544">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -70,10 +109,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="614" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1598113551015" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1598088899605">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1598192826603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598088899605" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598192826603" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1598029913794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

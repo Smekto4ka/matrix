@@ -6,66 +6,58 @@ import java.util.Scanner;
 
 public class Main {
 
+    static int i;
+    static int j;
+    static int x;
+    static int y;
+    static int data;
+    static String str;
+    static boolean onePassage;
+    static int lengthMatrixX;
+    static  int lengthMatrixY;
+    static  int[][] matrix1;
+    static  int[][] matrix2;
+    static int[][] matrix3;
+    static  LinkedList<Data> data1;
+    static  LinkedList<Data> data2;
     public static void main(String[] args) {
-        int i;
-        int j;
-        int x;
-        int y;
-        int data;
-        String str;
-        boolean onePassage = true;
+      onePassage = true;
 
         System.out.println("сторона матрицы X :");
         Scanner scan = new Scanner(System.in);
-        int lengthMatrixX = scan.nextInt();
+        lengthMatrixX = scan.nextInt();
         System.out.println("сторона матрицы Y :");
-        int lengthMatrixY = scan.nextInt();
+        lengthMatrixY = scan.nextInt();
 
-        LinkedList<Data> data1 = new LinkedList<>();
-        LinkedList<Data> data2 = new LinkedList<>();
+         data1 = new LinkedList<>();
+         data2 = new LinkedList<>();
 
 
-        int[][] matrix1 = new int[lengthMatrixX][lengthMatrixY];
-        int[][] matrix2 = new int[lengthMatrixX][lengthMatrixY];
-        int[][] matrix3 = new int[lengthMatrixX][lengthMatrixY];
+         matrix1 = new int[lengthMatrixX][lengthMatrixY];
+        matrix2 = new int[lengthMatrixX][lengthMatrixY];
+        matrix3 = new int[lengthMatrixX][lengthMatrixY];
         System.out.println("введите элементы для матрицы 1; вводить :x y data");
         str = scan.nextLine();// из-за \n после extInt()
 
         do {
             exit1:
             {
-                if (onePassage) break exit1;
 
-                try {
-                    i = str.indexOf(" ");
-                    j = str.lastIndexOf(" ");
-                    x = Integer.parseInt(str.substring(0, i));
-                    y = Integer.parseInt(str.substring(i + 1, j));
-                    data = Integer.parseInt(str.substring(j + 1, str.length()));
+            if (onePassage)
+                break exit1;
+            if (proverka())
+                break exit1;
 
-                } catch (Exception e) {
-                    System.out.println(" вы ввели неправильно данные , попробуйте снова. Ошибка : " + e);
+            for (Data dat1 : data1) {
+                if ((x == dat1.getX()) && (y == dat1.getY())) {
+                    dat1.setData(data);
+                    matrix1[x][y] = data;
                     break exit1;
                 }
-
-                if (x >= lengthMatrixX) {
-                    System.out.println(" индекс х превышает допустимое значение");
-                    break exit1;
-                }
-                if (y >= lengthMatrixY) {
-                    System.out.println(" индекс y превышает допустимое значение");
-                    break exit1;
-                }
-                for (Data dat1 : data1) {
-                    if ((x == dat1.getX()) && (y == dat1.getY())) {
-                        dat1.setData(data);
-                        matrix1[x][y] = data;
-                        break exit1;
-                    }
-                }
-                matrix1[x][y] = data;
-                data1.add(new Data(x, y, data));
             }
+            matrix1[x][y] = data;
+            data1.add(new Data(x, y, data));
+        }
             if (onePassage) onePassage = false;
             System.out.println("введите элементы:");
             str = scan.nextLine();
@@ -78,26 +70,9 @@ public class Main {
             {
                 if (onePassage) break exit2;
 
-                try {
-                    i = str.indexOf(" ");
-                    j = str.lastIndexOf(" ");
-                    x = Integer.parseInt(str.substring(0, i));
-                    y = Integer.parseInt(str.substring(i + 1, j));
-                    data = Integer.parseInt(str.substring(j + 1, str.length()));
+                if (proverka())
+                    break exit2;
 
-                } catch (Exception e) {
-                    System.out.println(" вы ввели неправильно данные , попробуйте снова. Ошибка : " + e);
-                    break exit2;
-                }
-
-                if (x >= lengthMatrixX) {
-                    System.out.println(" индекс х превышает допустимое значение");
-                    break exit2;
-                }
-                if (y >= lengthMatrixY) {
-                    System.out.println(" индекс y превышает допустимое значение");
-                    break exit2;
-                }
                 for (Data dat2 : data2) {
                     if ((x == dat2.getX()) && (y == dat2.getY())) {
                         dat2.setData(data);
@@ -141,6 +116,30 @@ public class Main {
             System.out.print("\n");
         }
     }
-//----
+
+
+    private static boolean proverka (){
+        try {
+            i = str.indexOf(" ");
+            j = str.lastIndexOf(" ");
+            x = Integer.parseInt(str.substring(0, i));
+            y = Integer.parseInt(str.substring(i + 1, j));
+            data = Integer.parseInt(str.substring(j + 1, str.length()));
+
+        } catch (Exception e) {
+            System.out.println(" вы ввели неправильно данные , попробуйте снова. Ошибка : " + e);
+            return true;
+        }
+
+        if (x >= lengthMatrixX) {
+            System.out.println(" индекс х превышает допустимое значение");
+            return true;
+        }
+        if (y >= lengthMatrixY) {
+            System.out.println(" индекс y превышает допустимое значение");
+            return true;
+        }
+        return false;
+    }
 
 }
