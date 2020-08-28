@@ -19,7 +19,7 @@ public class Kay<K, V> {
         this.kay = kay;
     }
 */
-    public V getData() {
+    public V getValue() {
         return data;
     }
 

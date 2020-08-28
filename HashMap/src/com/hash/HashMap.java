@@ -38,7 +38,7 @@ public class HashMap<K, V> {
         if (0 != size(kay)) {
             for (Object k : mass.get(id(kay)))
                 if (kay.equals(((Kay) k).getKay())) {
-                    return (V) ((Kay) k).getData();
+                    return (V) ((Kay) k).getValue();
                 }
         }
         System.out.print(" нет такого объекта");
@@ -58,7 +58,7 @@ public class HashMap<K, V> {
             for (int i = 0; i < size(kay); i++) {
                 removeKay = (Kay) mass.get(id(kay)).get(i);
                 if (kay.equals(removeKay.getKay())) {
-                    removeV = (V) removeKay.getData();
+                    removeV = (V) removeKay.getValue();
                     mass.get(id(kay)).remove(i);
                     return removeV;
                 }
