@@ -4,6 +4,8 @@ import sun.awt.image.ImageWatched;
 
 import java.util.LinkedList;
 
+import static java.lang.Math.abs;
+
 public class HashMap<K, V> {
     private int length;
     private LinkedList<LinkedList> mass;
@@ -20,7 +22,7 @@ public class HashMap<K, V> {
     }
 
     public void put(K kay, V value) {
-        if (0 != size(kay)) {
+        if (0 < size(kay)) {
             for (Object k : mass.get(id(kay))) {
                 if (((Kay) k).getKay().equals(kay)) {
                     ((Kay) k).setData(value);
@@ -44,11 +46,11 @@ public class HashMap<K, V> {
     }
 
     public int size(K kay) {
-        return mass.get(id(kay)).size();
+        return (mass.get(id(kay))).size();
     }
 
     private int id(K kay) {
-        return kay.hashCode() % length;
+        return  abs(kay.hashCode()) % length;
     }
 
     public V remove(K kay) {

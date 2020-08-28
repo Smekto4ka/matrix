@@ -14,11 +14,11 @@ public class Kay<K, V> {
     public K getKay() {
         return kay;
     }
-
+/*
     public void setKay(K kay) {
         this.kay = kay;
     }
-
+*/
     public V getData() {
         return data;
     }
